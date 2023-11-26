@@ -18,7 +18,7 @@ namespace BiggerBattery
         {
             Instance = this;
             _harmony.PatchAll();
-            
+
             ConfigSettings.Init();
 
             Log($"Plugin {ModName}-{ModVersion} loaded!");

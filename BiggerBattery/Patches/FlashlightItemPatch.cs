@@ -19,11 +19,9 @@ namespace BiggerBattery.Patches
                 case FlashlightType.ProFlashlight:
                     __instance.itemProperties.batteryUsage = ConfigSettings.ProFlashlightBatteryUsage.Value;
                     break;
-                // TODO: need to confirm this is laser pointer
-                // case FlashlightType.LaserPointer:
-                //     Plugin.Log($"LaserPointer Default Usage: {__instance.itemProperties.batteryUsage}");
-                //     __instance.itemProperties.batteryUsage = ConfigSettings.LaserPointerBatteryUsage.Value;
-                //     break;
+                case FlashlightType.LaserPointer:
+                    __instance.itemProperties.batteryUsage = ConfigSettings.LaserPointerBatteryUsage.Value;
+                    break;
                 default:
                     Plugin.Log($"Unknown FlashlightType: {type}");
                     break;

@@ -59,6 +59,7 @@
         <Compile Include="Patches\FlashlightItemPatch.cs" />
         <Compile Include="Patches\JetpackItemPatch.cs" />
         <Compile Include="Patches\PatcherToolPatch.cs" />
+        <Compile Include="Patches\BoomboxItemPatch.cs" />
         <Compile Include="Patches\WalkieTalkieItemPatch.cs" />
         <Compile Include="Plugin.cs" />
         <Compile Include="PluginInfo.cs" />
