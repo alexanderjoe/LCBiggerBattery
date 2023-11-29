@@ -4,8 +4,8 @@
     // The are differentiated by the flashlightTypeID field.
     public enum FlashlightType
     {
-        Flashlight = 0,
-        ProFlashlight = 1,
+        ProFlashlight = 0,
+        Flashlight = 1,
         LaserPointer = 2,
     }
 }

@@ -34,44 +34,40 @@
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="0Harmony">
-          <HintPath>..\..\..\..\..\..\AppData\Roaming\Thunderstore Mod Manager\DataFolder\LethalCompany\profiles\Main\BepInEx\core\0Harmony.dll</HintPath>
+            <HintPath>..\..\..\..\..\..\AppData\Roaming\Thunderstore Mod Manager\DataFolder\LethalCompany\profiles\Main\BepInEx\core\0Harmony.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp">
-          <HintPath>X:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll</HintPath>
+            <HintPath>X:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll</HintPath>
         </Reference>
         <Reference Include="BepInEx">
-          <HintPath>..\..\..\..\..\..\AppData\Roaming\Thunderstore Mod Manager\DataFolder\LethalCompany\profiles\Main\BepInEx\core\BepInEx.dll</HintPath>
+            <HintPath>..\..\..\..\..\..\AppData\Roaming\Thunderstore Mod Manager\DataFolder\LethalCompany\profiles\Main\BepInEx\core\BepInEx.dll</HintPath>
         </Reference>
         <Reference Include="System"/>
         <Reference Include="System.Core"/>
         <Reference Include="System.Data"/>
         <Reference Include="System.Xml"/>
         <Reference Include="UnityEngine">
-          <HintPath>X:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.dll</HintPath>
+            <HintPath>X:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">
-          <HintPath>X:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+            <HintPath>X:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="ConfigSettings.cs" />
-        <Compile Include="FlashlightType.cs" />
-        <Compile Include="Patches\FlashlightItemPatch.cs" />
-        <Compile Include="Patches\JetpackItemPatch.cs" />
-        <Compile Include="Patches\PatcherToolPatch.cs" />
-        <Compile Include="Patches\BoomboxItemPatch.cs" />
-        <Compile Include="Patches\WalkieTalkieItemPatch.cs" />
-        <Compile Include="Plugin.cs" />
-        <Compile Include="PluginInfo.cs" />
+        <Compile Include="ConfigSettings.cs"/>
+        <Compile Include="FlashlightType.cs"/>
+        <Compile Include="Patches\FlashlightItemPatch.cs"/>
+        <Compile Include="Patches\JetpackItemPatch.cs"/>
+        <Compile Include="Patches\PatcherToolPatch.cs"/>
+        <Compile Include="Patches\BoomboxItemPatch.cs"/>
+        <Compile Include="Patches\WalkieTalkieItemPatch.cs"/>
+        <Compile Include="Plugin.cs"/>
+        <Compile Include="PluginInfo.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
-    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-         Other similar extension points exist, see Microsoft.Common.targets.
-    <Target Name="BeforeBuild">
-    </Target>
-    <Target Name="AfterBuild">
-    </Target>
-    -->
 
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <Exec Command="xcopy /y /d &quot;$(TargetDir)$(TargetFileName)&quot; &quot;$(AppData)/r2modmanPlus-local/LethalCompany/profiles/Default/BepInEx/plugins/alexanderjoe-BiggeryBattery&quot;"/>
+    </Target>
 </Project>

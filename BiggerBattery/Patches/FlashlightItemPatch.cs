@@ -13,11 +13,11 @@ namespace BiggerBattery.Patches
 
             switch (type)
             {
-                case FlashlightType.Flashlight:
-                    __instance.itemProperties.batteryUsage = ConfigSettings.FlashlightBatteryUsage.Value;
-                    break;
                 case FlashlightType.ProFlashlight:
                     __instance.itemProperties.batteryUsage = ConfigSettings.ProFlashlightBatteryUsage.Value;
+                    break;
+                case FlashlightType.Flashlight:
+                    __instance.itemProperties.batteryUsage = ConfigSettings.FlashlightBatteryUsage.Value;
                     break;
                 case FlashlightType.LaserPointer:
                     __instance.itemProperties.batteryUsage = ConfigSettings.LaserPointerBatteryUsage.Value;
